@@ -1,6 +1,6 @@
 ## flyway修改对应的代码即可以使用Oracle 11版本数据库
 
-1.去掉OracleDataBase类中ensureSupported方法中的校验
-2.去掉DataBase类中ensureDatabaseIsCompatibleWithFlywayEdition方法中的校验
-3.去掉DbMigrate类中migrateGroup方法中关于失败脚本执行的判断（220行代码）（ps去掉这段校验是为了运行flyway不去校验之前是否执行了错误的脚本，
+- 1.去掉OracleDataBase类中ensureSupported方法中的校验
+- 2.去掉DataBase类中ensureDatabaseIsCompatibleWithFlywayEdition方法中的校验
+- 3.去掉DbMigrate类中migrateGroup方法中关于失败脚本执行的判断（220行代码）（ps去掉这段校验是为了运行flyway不去校验之前是否执行了错误的脚本，
 如果检验，之前执行了错误的脚本当下就会无法执行，一直卡住）
